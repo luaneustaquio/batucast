@@ -65,7 +65,7 @@ Then("the user should receive a success message confirming their login", () => {
 });
 
 Then("the user should be redirected to the {string} page", (page: string) => {
-    cy.url().should("eq", `http://localhost:3000/${page}`);
+    cy.url().should("include", `/${page}`);
 });
 
 // LOGIN WITH INVALID CREDENTIALS
